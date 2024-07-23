@@ -30,9 +30,9 @@ export default function SignIn() {
       return;
     }
     if (!isValidEmail(email)) {
-        ToastAndroid.show("Invalid email format.", ToastAndroid.LONG);
-        return;
-      }
+      ToastAndroid.show("Invalid email format.", ToastAndroid.LONG);
+      return;
+    }
 
     if (!password) {
       ToastAndroid.show("Password is required.", ToastAndroid.LONG);
@@ -43,13 +43,14 @@ export default function SignIn() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        router.replace("/mytrip");
         console.log(user);
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage,error.code);
+        console.log(errorMessage, error.code);
         if (errorCode == "auth/invalid-credential") {
           ToastAndroid.show("Invalid Credentials.", ToastAndroid.LONG);
           return;
