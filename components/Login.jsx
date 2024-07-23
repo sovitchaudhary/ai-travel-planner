@@ -49,7 +49,7 @@ export default function Login() {
               fontSize: 17,
             }}
           >
-            Sign In With Google
+            Get Started
           </Text>
         </TouchableOpacity>
       </View>
