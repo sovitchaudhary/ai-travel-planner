@@ -17,7 +17,13 @@ export default function TabLayout() {
           size={24} color={color} />
         }}
       />
-      <Tabs.Screen name="discover" />
+      <Tabs.Screen name="discover"
+        options={{
+          tabBarLabel:"Discover",
+          tabBarIcon:({color})=><Ionicons name="globe-sharp" 
+          size={24} color={color} />
+        }}
+      />
       <Tabs.Screen name="profile" />
     </Tabs>
   );
