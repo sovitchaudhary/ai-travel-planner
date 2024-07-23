@@ -17,6 +17,7 @@ export default function TabLayout() {
           size={24} color={color} />
         }}
       />
+
       <Tabs.Screen name="discover"
         options={{
           tabBarLabel:"Discover",
@@ -24,7 +25,14 @@ export default function TabLayout() {
           size={24} color={color} />
         }}
       />
-      <Tabs.Screen name="profile" />
+
+      <Tabs.Screen name="profile"
+        options={{
+          tabBarLabel:"Profile",
+          tabBarIcon:({color})=><Ionicons name="people-circle" 
+          size={24} color={color} />
+        }}
+      />
     </Tabs>
   );
 }
